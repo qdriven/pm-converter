@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "a49719dd-44e0-4b2d-bc6c-8815bd3a44de",
+		"name": "pilotrunner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test_folder",
+			"item": [
+				{
+					"name": "request_name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/feature/pyCreditCourtDetailEntryService/mockJson"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "folder2",
+			"item": [
+				{
+					"name": "getMockedFeatureJson",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/feature/pyCreditCourtDetailEntryService/mockJson",
+						"description": "getAllThirdParties"
+					},
+					"response": []
+				},
+				{
+					"name": "feture2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/feature/pyCreditCourtDetailEntryService/mockJson",
+						"description": "getAllThirdParties"
+					},
+					"response": []
+				}
+			],
+			"description": "folders2-item-group"
+		},
+		{
+			"name": "http://{{test_env}}:8080/feature/pyCreditCourtDetailEntryService/mockJson",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://{{test_env}}:8080/feature/pyCreditCourtDetailEntryService/mockJson"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/feature/pyCreditCourtDetailEntryService",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/feature/pyCreditCourtDetailEntryService"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/feature/pyCreditCourtDetailEntryService/mockJson",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/feature/pyCreditCourtDetailEntryService/mockJson",
+				"description": "req_desc"
+			},
+			"response": []
+		}
+	]
+}
