@@ -1,0 +1,32 @@
+version: '3'
+services:
+    app:
+        build: 
+            context: .
+            dockerfile: build/Dockerfile_python
+        volumes:
+            - ./app:/usr/src/app
+            - ./logs/app:/var/log/app
+            - ./config/python:/usr/src/config
+        expose:
+            - "3000"
+        environment:
+            - DEBUG=${DEBUG}
+            - HOST=${HOST}
+            - PORT=3000
+        command: "uwsgi --ini /usr/src/config/server.ini"
+    nginx:
+        build:
+            context: .
+            dockerfile: build/Dockerfile_nginx
+        volumes:
+            - ./app:/var/www
+            - ./logs/nginx:/var/log/nginx
+            - ./config/nginx/sites:/etc/nginx/sites-available
+        ports:
+            - ${PORT}:80
+        depends_on:
+            - app
+
+volumes:
+    socketvol: {}

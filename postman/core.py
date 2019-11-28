@@ -112,8 +112,11 @@ class PostmanCollections:
             print(sample_code)
 
 
+class PostmanRequest:
+    def __init__(self):
+        pass
+
 if __name__ == '__main__':
     loader = PostmanCollections("../OPERATING-SERVICE.json")
     print(loader)
     print(loader.convert_to())
-
